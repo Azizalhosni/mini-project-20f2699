@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adBT"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+    android:background="@drawable/cart_background"
+    android:elevation="3dp">
+    <!--this codes creates a TextView for title,price,description -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--this code below creates ImageView for food with the attribute declarations like srcCompat and size of image -->
+
+    <ImageView
+        android:id="@+id/picF"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/pizza1" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="0.0"
+        android:textColor="#373b54"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/picF"
+        app:layout_constraintStart_toStartOf="@+id/picF"
+        app:layout_constraintTop_toBottomOf="@+id/picF" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="$"
+        android:textColor="#FF3D00"
+        app:layout_constraintBottom_toBottomOf="@+id/cost"
+        app:layout_constraintEnd_toStartOf="@+id/cost"
+        app:layout_constraintTop_toBottomOf="@+id/picF"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/strat_button"
+        android:paddingStart="9dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="9dp"
+        android:text="+ADD"
+        android:textColor="#FBF7F7"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/picF"
+        app:layout_constraintStart_toStartOf="@+id/picF"
+        app:layout_constraintTop_toBottomOf="@+id/cost"
+        tools:paddingBottom="3dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

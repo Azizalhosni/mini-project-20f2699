@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.showDetailsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<!--This code creates a vertical LinearLayout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--this codes creates a TextView for title,price,description -->
+            <TextView
+
+                android:id="@+id/titletx"
+
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                android:text="title"
+                android:textAlignment="center"
+                android:textColor="#373b54"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/prictx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAlignment="center"
+                android:textColor="#ff5e00"
+                android:textSize="25sp" />
+
+            <!--this code below creates ImageView for pizza with the attribute declarations-->
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pizza1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!-- This code below creates an ImageView for a minus button with its attribute definitions -->
+                <ImageView
+                    android:id="@+id/muinsBT"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/img_12" />
+
+                <TextView
+                    android:id="@+id/numOrderTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+                <!-- This code below creates an ImageView for a plus button with its attribute definitions -->
+                <ImageView
+                    android:id="@+id/plusBT"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/img_13" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/descrbtiontx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="description"
+                android:textColor="#686868"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- This code below creates an Text view we make it as mottun with its attribute definitions
+    .used when a customer wants to add a meal to the basket-->
+    <TextView
+        android:id="@+id/addtomycarttx"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/strat_button"
+        android:text="add to my cart"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
